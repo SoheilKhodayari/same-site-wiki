@@ -48,14 +48,15 @@ The repository uses [Github Actions](https://github.com/features/actions) to aut
 **Docker:** You can build and run this Wiki inside a Docker container with:
 
 ```
-docker-compose up
+$ cp _Gemfile Gemfile
+$ docker-compose up
 ```
 
 **Host Machine:** alternatively, you can build it inside your host machine with:
 
 ```
-gem install just-the-docs
-bundle exec jekyll serve
+$ gem install just-the-docs
+$ bundle exec jekyll serve
 ```
 
 For more information, please refer to the official [just-the-docs](https://github.com/just-the-docs/just-the-docs) and [Jekyll](https://jekyllrb.com/) documentations. 
