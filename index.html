@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>SameSite Wiki</title>
 </head>
 <body>
 
+<script type="text/javascript">
+	 
+	/**
+	* forward HTTP requests to root directory to /wiki/main.html
+	*/
+	let wikiMainFile = '' + window.location + '/wiki/main';
+	window.location.replace(wikiMainFile);
 
-	<p>test webpage</p>
+</script>
+
 
 </body>
 </html>
