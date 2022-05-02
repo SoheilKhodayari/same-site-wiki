@@ -21,7 +21,7 @@
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=SameSite%20Cookies%20Wiki:%20All%20You%20Need%20to%20Know&url=https://soheilkhodayari.github.io/SameSiteWiki/)
 
-A simple wiki with all you need to know about SameSite cookies (but were afraid to ask?), with more focus on principal concepts, security risks, and correct and secure `SameSite` configurations.
+A simple wiki with all you need to know about SameSite cookies (but were afraid to ask?). Specific focus on principal concepts, security risks, and correct and secure `SameSite` configurations.
 
 An online version of the Wiki is available at [https://soheilkhodayari.github.io/SameSiteWiki/wiki/main.html](https://soheilkhodayari.github.io/SameSiteWiki/wiki/main.html).
 
