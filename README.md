@@ -48,7 +48,6 @@ The repository uses [Github Actions](https://github.com/features/actions) to aut
 **Docker:** You can build and run this Wiki inside a Docker container with:
 
 ```
-$ cp _Gemfile Gemfile
 $ docker-compose up
 ```
 
