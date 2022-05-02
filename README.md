@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-	<a href="//soheilkhodayari.github.io/SameSiteWiki/">Website</a> |
+	<a href="//soheilkhodayari.github.io/SameSiteWiki/wiki/main.html">Website</a> |
 	<a href="//github.com/SoheilKhodayari/SameSiteWiki/blob/master/wiki">Wiki</a> |
 	<a href="//github.com/SoheilKhodayari/SameSiteWiki/blob/master/README.md#quick-start">Quick Start</a> |
 	<a href="//soheilkhodayari.github.io/papers/sp22_samesite_cookies.pdf">Paper</a>
