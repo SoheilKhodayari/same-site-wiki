@@ -5,16 +5,20 @@
 </head>
 <body>
 
+<!-- Simple Client-side Proxy -->
 <script type="text/javascript">
 	 
+	function get_striped_str(str, char){
+		return str.slice(0, -1); 
+	}
+
 	/**
 	* forward HTTP requests to root directory to /wiki/main.html
 	*/
-	let wikiMainFile = '' + window.location + '/wiki/main';
-	window.location.replace(wikiMainFile);
+	let wiki_main_file = get_striped_str(window.location, '/') + 'wiki/main';
+	window.location.replace(wiki_main_file);
 
 </script>
-
 
 </body>
 </html>
