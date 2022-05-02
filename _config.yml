@@ -2,4 +2,7 @@ title: "SameSite Wiki"
 remote_theme: just-the-docs/just-the-docs
 color_scheme: "dark"
 search_enabled: true
-exclude: README.md, CHANGELOG.md, CODE_OF_CONDUCT.md
+exclude: 
+  - README.md,
+  - CHANGELOG.md, 
+  - CODE_OF_CONDUCT.md
