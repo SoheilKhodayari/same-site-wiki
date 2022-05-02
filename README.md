@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="//soheilkhodayari.github.io/SameSiteWiki/">
-		<img align="center" alt="SameSiteWiki" src="assets/logo.png" height="195">
+		<img align="center" alt="SameSiteWiki" src="assets/logo.png" height="105">
 	</a>
 </p>
 
@@ -21,9 +21,12 @@
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=SameSite%20Cookies%20Wiki:%20All%20You%20Need%20to%20Know&url=https://soheilkhodayari.github.io/SameSiteWiki/)
 
+A simple wiki with all you need to know about SameSite cookies (but were afraid to ask?), with more focus on principal concepts, security risks, and correct and secure `SameSite` configurations.
 
+An online version of the Wiki is available at [https://soheilkhodayari.github.io/SameSiteWiki/](https://soheilkhodayari.github.io/SameSiteWiki/).
 
 This project is licensed under `GNU AFFERO GENERAL PUBLIC LICENSE V3.0`. See [here](LICENSE) for more information.
+
 
 ## 🚀 Quick Start
 
@@ -61,7 +64,8 @@ For more information, please refer to the official [just-the-docs](https://githu
 
 ## 🙋 Questions
 
-For any questions, suggestions, feedback or concerns, please [raise an issue in the repository](https://github.com/SoheilKhodayari/SameSiteWiki/issues). We would be delighted to know if there is any specific behaviour you would like to see documented, but is currently missing from the Wiki. For private issues, you can reach out to me via email.
+For any questions, suggestions, feedback or concerns, please [raise an issue in the repository](https://github.com/SoheilKhodayari/SameSiteWiki/issues). 
+We would be delighted to know if there is any specific behaviour you would like to see documented, but is currently missing from the Wiki. For private issues, you can reach out to me via email.
 
 
 ## 🎃 Contribution and Code Of Conduct
