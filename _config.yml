@@ -6,3 +6,25 @@ exclude:
   - README.md
   - CHANGELOG.md
   - CODE_OF_CONDUCT.md
+
+# Aux links for the upper right navigation
+aux_links:
+  "SameSite Wiki on GitHub":
+    - "//github.com/SoheilKhodayari/SameSiteWiki"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
+
+last_edit_timestamp: true 
+# uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+last_edit_time_format: "%b %e %Y at %I:%M %p" 
+
+gh_edit_link: true 
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/SoheilKhodayari/SameSiteWiki" 
+gh_edit_branch: "master"
+# gh_edit_source: docs # the source that your files originate from
+
+ # "tree" or "edit" if you want the user to jump into the editor immediately
+gh_edit_view_mode: "tree"
