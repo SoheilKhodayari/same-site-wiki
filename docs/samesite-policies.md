@@ -4,6 +4,7 @@ has_children: true
 nav_order: 2
 ---
 
+{% include _includes/toggle_color.html %}
 
 # SameSite Wiki
 
@@ -12,4 +13,6 @@ Stable
 
 
 ## SameSite Policies
+
+SameSite policies defines the contexts in which browsers include cookies in HTTP requests.
 

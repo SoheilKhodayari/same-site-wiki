@@ -4,6 +4,8 @@ parent: SameSite Policies
 nav_order: 1
 ---
 
+{% include _includes/toggle_color.html %}
+
 # SameSite Wiki
 
 Stable
