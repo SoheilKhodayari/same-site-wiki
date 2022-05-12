@@ -1,7 +1,6 @@
 ---
 title: Overview of Policies
 parent: SameSite Policies
-has_children: true
 nav_order: 1
 ---
 
@@ -39,22 +38,22 @@ Set-Cookie: 3pc-cookie=value; Secure; SameSite=None
 
 | **None** 	| **Lax**    	| **Strict** 	| **Context**     	|      	| **Example**                      	|
 |----------	|------------	|------------	|-----------------	|------	|----------------------------------	|
-| &check;  	| &check;    	| -          	| Anchor          	| GET  	| \<a href=url\>                   	|
-| &check;  	| &check;    	| -          	| Form            	| GET  	| \<form method=GET action=url \>  	|
-| &check;  	| &check;    	| -          	| Link prerender  	| GET  	| \<link rel=prerender href=url \> 	|
-| &check;  	| &check;    	| -          	| Link prefetch   	| GET  	| \<link rel=prefetch href=url \>  	|
-| &check;  	| &check;    	| -          	| window.open()   	| GET  	| window.open(url)                 	|
-| &check;  	| &check;    	| -          	| window.location 	| GET  	| window.location.assign(url)      	|
-| &check;  	| &check;(*) 	| -          	| Form            	| POST 	| \<form method=POST action=url\>  	|
-| &check;  	| -          	| -          	| Iframe          	| GET  	| \<iframe src=url\>               	|
-| &check;  	| -          	| -          	| Object          	| GET  	| \<object data=url\>              	|
-| &check;  	| -          	| -          	| Embed           	| GET  	| \<embed src=url\>                	|
-| &check;  	| -          	| -          	| Image           	| GET  	| \<img src=url\>                  	|
-| &check;  	| -          	| -          	| Script          	| GET  	| \<script src=url\>               	|
-| &check;  	| -          	| -          	| Stylesheet      	| GET  	| \<link rel=stylesheet href=url\> 	|
-| &check;  	| &check;(*) 	| -          	| Ajax Requests   	| Any  	| xmlhttp.open("POST", url)        	|
+| ✓       	| ✓         	| -          	| Anchor          	| GET  	| \<a href=url\>                   	|
+| ✓       	| ✓         	| -          	| Form            	| GET  	| \<form method=GET action=url \>  	|
+| ✓       	| ✓         	| -          	| Link prerender  	| GET  	| \<link rel=prerender href=url \> 	|
+| ✓       	| ✓         	| -          	| Link prefetch   	| GET  	| \<link rel=prefetch href=url \>  	|
+| ✓       	| ✓         	| -          	| window.open()   	| GET  	| window.open(url)                 	|
+| ✓       	| ✓         	| -          	| window.location 	| GET  	| window.location.assign(url)      	|
+| ✓       	| ✓     (*) 	| -          	| Form            	| POST 	| \<form method=POST action=url\>  	|
+| ✓       	| -          	| -          	| Iframe          	| GET  	| \<iframe src=url\>               	|
+| ✓       	| -          	| -          	| Object          	| GET  	| \<object data=url\>              	|
+| ✓       	| -          	| -          	| Embed           	| GET  	| \<embed src=url\>                	|
+| ✓       	| -          	| -          	| Image           	| GET  	| \<img src=url\>                  	|
+| ✓       	| -          	| -          	| Script          	| GET  	| \<script src=url\>               	|
+| ✓       	| -          	| -          	| Stylesheet      	| GET  	| \<link rel=stylesheet href=url\> 	|
+| ✓       	| ✓     (*) 	| -          	| Ajax Requests   	| Any  	| xmlhttp.open("POST", url)        	|
 
-TABLE I: Contexts where the three `SameSite` policies apply. Symbols &check; and - show contexts where cookies
+TABLE I: Contexts where the three `SameSite` policies apply. Symbols ✓ and - show contexts where cookies
 are included and not included in cross-site HTTP requests, respectively, and (\*) marks contexts where the `Lax+POST` exceptional policy applies. 
 
 
@@ -63,7 +62,7 @@ are included and not included in cross-site HTTP requests, respectively, and (\*
 
 Recent versions of modern browsers provide a more secure default for `SameSite` to your cookies. In particular, starting from July 2020, Google Chrome set the new [default policy to Lax](https://www.chromestatus.com/feature/5088147346030592), meaning that when the `SameSite` attribute is missing, the browser will enforce the Lax policy. Other browser vendors adopted<sup>[\[1, 2\]](#references)</sup>, or are planning to adopt the new default policy[\[3\]](#references)</sup>. Previously, the default was that cookies were sent for all requests, corresponding to the `SameSite=None` policy.
 
-`Lax` replaced `None` as the default value to enforce a second level of defense against some classes of [Cross-Site Request Forgery](https://arxiv.org/pdf/1708.08786.pdf) and [XS-Leak](https://publications.cispa.saarland/3329/1/COSI.pdf) attacks.
+The `Lax` policy replaced `None` as the default value to enforce a second level of defense against some classes of [Cross-Site Request Forgery](https://arxiv.org/pdf/1708.08786.pdf) and [XS-Leak](https://publications.cispa.saarland/3329/1/COSI.pdf) attacks.
 
 Unfortunately, enforcing a default Lax policy may break web application functionalities that rely on cross-site communications and cookies. For example, web-based Single Sign-On (SSO) implementations, such as OpenIDConnect or SAML SSO implementations, optimize user experience by avoiding user re-authentication when valid authenticated session cookies are included in the cross-site requests. Such requests are often implemented via POST asynchronous requests or HTML POST forms. The new default Lax policy forbids browsers from sending cookies with these requests, breaking these functionalities. To counter that, Chrome introduced an exception to the Lax policy---called `Lax+POST`---where, for all cookies without the `SameSite` attribute, Chrome applies the None policy only for the first two minutes after the page load. Then, Chrome switches to the Lax policy. Table I lists the contexts covered by `Lax+POST`.
 
