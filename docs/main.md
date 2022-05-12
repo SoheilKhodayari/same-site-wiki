@@ -13,6 +13,39 @@ This wiki is meant to introduce readers to the SameSite cookie policy and also s
 
 [Contribute Now](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/same-site-wiki){: .btn .btn-blue .fs-5 .mb-4 .mb-md-0 }
 
+<hr>
+
+<button class="btn js-toggle-dark-mode">Toggle Theme Light</button>
+
+<script>
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+const THEME_LIGHT = 'light';
+const THEME_DARK = 'dark';
+const THEME_STORAGE_KEY = 'theme-color';
+
+var theTheme = localStorage.getItem(THEME_STORAGE_KEY);
+
+if(theTheme === THEME_LIGHT){
+	jtd.setTheme('light');
+} else if (theTheme === THEME_DARK){
+	jtd.setTheme('dark');
+} else{
+	jtd.setTheme('dark'); // default theme
+}
+
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === THEME_DARK) {
+    jtd.setTheme(THEME_LIGHT);
+    localStorage.setItem(THEME_STORAGE_KEY, THEME_LIGHT);
+
+  } else {
+  	localStorage.setItem(THEME_STORAGE_KEY, THEME_DARK);
+    jtd.setTheme(THEME_DARK);
+  }
+});
+</script>
+
 ## Overview
 
 SameSite policies defines the request contexts in which browsers include cookies in HTTP requests, such as same-site and cross-site requests. Using SameSite policies, developers can limit the scope of session cookies to a first-party context to protect their web applications from two important families of cross-site (XS) web attacks, that is, [Cross-Site Leaks](https://xsleaks.dev/) (XS-Leaks) and [Cross-Site Request Forgery](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) (CSRF), by stripping authentication cookies from cross-site requests the user nor the web application intended to initiate.
