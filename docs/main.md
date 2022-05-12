@@ -8,12 +8,10 @@ nav_order: 1
 Stable
 {: .label .label-green }
 
-This wiki is meant to introduce readers to the SameSite cookie policy and also serve as a reference guide for experienced researchers and developers using SameSite cookies. While the wiki covers different aspects of SameSite policies, new security risks and threats are always emerging. Improvements and suggestions, whether to add new content or expand existing documentation, are always more than appreciated. 
-{: .fs-6 .fw-300 }
+This wiki is meant to introduce readers to the SameSite cookie policy and also serve as a reference guide for experienced researchers and developers using SameSite cookies. 
+{: .fs-5 .fw-300 }
 
-
-[Contribute Now](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/same-site-wiki){: .btn .btn-yellow .fs-5 .mb-4 .mb-md-0 }
-
+[Contribute Now](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/same-site-wiki){: .btn .btn-blue .fs-5 .mb-4 .mb-md-0 }
 
 ## Overview
 
@@ -44,6 +42,11 @@ In the preparation step, the attacker prepares a malicious webpage referring to 
 The main benefit of the `SameSite` attribute is a more stricter default cookie policy, which can disrupt existing websites. To help developers transition to the [new default policy](https://chromestatus.com/feature/5088147346030592), Google introduced three [gradual changes to Chrome](https://www.chromium.org/updates/same-site/), introduced in 2016, 2019, and 2020.
 
 In April 2016, Chrome 51 introduced support for the new `SameSite` cookie attribute<sup>[\[8\]](#references)</sup> without modifying the default policy. Later, in September 2019, Chrome 77 started showing console warning messages for cookies missing the `SameSite` flag. The final step of this transition took place in 2020, with Chrome 80. First, in February 2020, Chrome set [Lax+POST](https://www.chromium.org/updates/same-site/faq/#q-what-is-the-lax-post-mitigation) the new default policy. However, shortly after, Google rolled it back (April 2020) to ease developers' transition to the new policy in light of the COVID-19 pandemic. The Lax-by-default was then restored in July 2020 with [Chrome 84](https://www.chromium.org/updates/same-site/faq/).
+
+
+## About This Wiki
+
+While the wiki covers different aspects of SameSite policies, new security risks and threats are always emerging. Improvements and suggestions, whether to add new content or expand existing documentation, are always more than appreciated. For more information, please refer to [contribution guidelines](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions).
 
 
 ## References
