@@ -1,5 +1,5 @@
 <p align="center">
-	<a href="//soheilkhodayari.github.io/SameSiteWiki/">
+	<a href="//soheilkhodayari.github.io/same-site-wiki/">
 		<img align="center" alt="SameSiteWiki" src="assets/logo.png" height="105">
 	</a>
 </p>
@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-	<a href="//soheilkhodayari.github.io/SameSiteWiki/wiki/main.html">Website</a> |
-	<a href="//github.com/SoheilKhodayari/SameSiteWiki/blob/master/wiki">Wiki</a> |
-	<a href="//github.com/SoheilKhodayari/SameSiteWiki/blob/master/README.md#quick-start">Quick Start</a> |
+	<a href="//soheilkhodayari.github.io/same-site-wiki/docs/main.html">Website</a> |
+	<a href="//github.com/SoheilKhodayari/same-site-wiki/blob/master/docs">Wiki</a> |
+	<a href="//github.com/SoheilKhodayari/same-site-wiki/blob/master/README.md#quick-start">Quick Start</a> |
 	<a href="//soheilkhodayari.github.io/papers/sp22_samesite_cookies.pdf">Paper</a>
 </p>
 
@@ -19,11 +19,11 @@
 
 # 🍪 SameSite Wiki
 
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=SameSite%20Cookies%20Wiki:%20All%20You%20Need%20to%20Know&url=https://soheilkhodayari.github.io/SameSiteWiki/)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=SameSite%20Cookies%20Wiki:%20All%20You%20Need%20to%20Know&url=https://soheilkhodayari.github.io/same-site-wiki/)
 
 A simple wiki with all you need to know about SameSite cookies (but were afraid to ask?). Specific focus on principal concepts, security risks, and correct and secure `SameSite` configurations.
 
-An online version of the Wiki is available at [https://soheilkhodayari.github.io/SameSiteWiki/wiki/main.html](https://soheilkhodayari.github.io/SameSiteWiki/wiki/main.html).
+An online version of the Wiki is available at [https://soheilkhodayari.github.io/same-site-wiki/docs/main.html](https://soheilkhodayari.github.io/same-site-wiki/).
 
 This project is licensed under `GNU AFFERO GENERAL PUBLIC LICENSE V3.0`. See [here](LICENSE) for more information.
 
@@ -64,7 +64,7 @@ For more information, please refer to the official [just-the-docs](https://githu
 
 ## 🙋 Questions
 
-For any questions, suggestions, feedback or concerns, please [raise an issue in the repository](https://github.com/SoheilKhodayari/SameSiteWiki/issues). 
+For any questions, suggestions, feedback or concerns, please [raise an issue in the repository](https://github.com/SoheilKhodayari/same-site-wiki/issues). 
 We would be delighted to know if there is any specific behaviour you would like to see documented, but is currently missing from the Wiki. For private issues, you can reach out to me via email.
 
 

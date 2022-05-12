@@ -9,14 +9,14 @@
 	/**
 	* Client-side HTTP Proxy 
 	* --------------------------
-	* 	- forward HTTP requests to root directory to /wiki/main.html
+	* 	- forward HTTP requests to root directory to /docs/main.html
 	*/
 
 	let current_location = window.location.href
 	if(!current_location.endsWith('/')){
 		current_location = current_location + '/'
 	}
-	let wiki_main_file = current_location + 'wiki/main';
+	let wiki_main_file = current_location + 'docs/main';
 	window.location.replace(wiki_main_file);
 </script>
 
