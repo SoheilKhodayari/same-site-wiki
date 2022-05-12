@@ -3,6 +3,10 @@ title: Overview
 nav_order: 1
 ---
 
+
+{% include toggle_color.html %}
+
+
 # SameSite Wiki
 
 Stable
@@ -15,36 +19,6 @@ This wiki is meant to introduce readers to the SameSite cookie policy and also s
 
 <hr>
 
-<button class="btn js-toggle-dark-mode">Toggle Theme Light</button>
-
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-
-const THEME_LIGHT = 'light';
-const THEME_DARK = 'dark';
-const THEME_STORAGE_KEY = 'theme-color';
-
-var theTheme = localStorage.getItem(THEME_STORAGE_KEY);
-
-if(theTheme === THEME_LIGHT){
-	jtd.setTheme('light');
-} else if (theTheme === THEME_DARK){
-	jtd.setTheme('dark');
-} else{
-	jtd.setTheme('dark');
-}
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === THEME_DARK) {
-    jtd.setTheme(THEME_LIGHT);
-    localStorage.setItem(THEME_STORAGE_KEY, THEME_LIGHT);
-
-  } else {
-  	localStorage.setItem(THEME_STORAGE_KEY, THEME_DARK);
-    jtd.setTheme(THEME_DARK);
-  }
-});
-</script>
 
 ## Overview
 
