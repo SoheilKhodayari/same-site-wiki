@@ -60,7 +60,7 @@ are included and not included in cross-site HTTP requests, respectively, and (\*
 
 ## Default Policy and Lax+POST Exception
 
-Recent versions of modern browsers provide a more secure default for `SameSite` to your cookies. In particular, starting from July 2020, Google Chrome set the new [default policy to Lax](https://www.chromestatus.com/feature/5088147346030592), meaning that when the `SameSite` attribute is missing, the browser will enforce the Lax policy. Other browser vendors adopted<sup>[\[1, 2\]](#references)</sup>, or are planning to adopt the new default policy[\[3\]](#references)</sup>. Previously, the default was that cookies were sent for all requests, corresponding to the `SameSite=None` policy.
+Recent versions of modern browsers provide a more secure default for `SameSite` to your cookies. In particular, starting from July 2020, Google Chrome set the new [default policy to Lax](https://www.chromestatus.com/feature/5088147346030592), meaning that when the `SameSite` attribute is missing, the browser will enforce the Lax policy. Other browser vendors adopted<sup>[\[1, 2\]](#references)</sup>, or are planning to adopt the new default policy<sup>[\[3\]](#references)</sup>. Previously, the default was that cookies were sent for all requests, corresponding to the `SameSite=None` policy.
 
 The `Lax` policy replaced `None` as the default value to enforce a second level of defense against some classes of [Cross-Site Request Forgery](https://arxiv.org/pdf/1708.08786.pdf) and [XS-Leak](https://publications.cispa.saarland/3329/1/COSI.pdf) attacks.
 
@@ -86,7 +86,7 @@ Set-Cookie: 3pc-cookie=value; SameSite=Lax
 
 Cookies that are intended for third-party or cross-site contexts must specify `SameSite=None` only together with [`Secure`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies), i.e., third-party cookies are restricted to secure contexts/ HTTPS connections only.
 
-Cookies that fail to do so, i.e., `SameSite=None` cookies missing the `Secure` flag will be [rejected](https://www.chromestatus.com/feature/5633521622188032) by Chrome, so as to mitigate the risk of [pervasive monitoring](https://www.heise.de/netze/rfc/rfcs/rfc7258.shtml)<sup>[\[4\]](#references)</sup>.
+Cookies that fail to do so, i.e., `SameSite=None` cookies missing the `Secure` flag will be [rejected](https://www.chromestatus.com/feature/5633521622188032) by Chrome in order to mitigate the risk of [pervasive monitoring](https://www.heise.de/netze/rfc/rfcs/rfc7258.shtml)<sup>[\[4\]](#references)</sup>.
 
 
 ## Handling of SameSite=Invalid Policies
