@@ -1,6 +1,5 @@
 ---
 title: Overview
-has_children: true
 nav_order: 1
 ---
 
@@ -8,6 +7,13 @@ nav_order: 1
 
 Stable
 {: .label .label-green }
+
+This wiki is meant to introduce readers to the SameSite cookie policy and also serve as a reference guide for experienced researchers and developers using SameSite cookies. While the wiki covers different aspects of SameSite policies, new security risks and threats are always emerging. Improvements and suggestions, whether to add new content or expand existing documentation, are always more than appreciated. 
+{: .fs-6 .fw-300 }
+
+
+[Contribute Now](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/same-site-wiki){: .btn .fs-5 .mb-4 .mb-md-0 }
+
 
 ## Overview
 
