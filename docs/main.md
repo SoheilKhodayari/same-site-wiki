@@ -1,7 +1,7 @@
 ---
 title: Overview
 has_children: true
-nav_order: 2
+nav_order: 1
 ---
 
 # SameSite Wiki
@@ -9,7 +9,7 @@ nav_order: 2
 Stable
 {: .label .label-green }
 
-### Overview
+## Overview
 
 SameSite policies defines the request contexts in which browsers include cookies in HTTP requests, such as same-site and cross-site requests. Leveraging SameSite policies, developers can limit the scope of session cookies to a first-party context to protect their web applications from two important families of cross-site (XS) web attacks, that is, [Cross-Site Leaks](https://xsleaks.dev/) (XS-Leaks) and [Cross-Site Request Forgery](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) (CSRF), by stripping authentication cookies from cross-site requests the user nor the web application intended to initiate.
 
@@ -20,7 +20,7 @@ In 2016, Google revamped the idea of SameSite policies by proposing and implemen
 the `SameSite` attribute of the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) HTTP response header, which was proposed as a part of the [RFC 6265bis](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) specification<sup>[\[9\]](#references)</sup>. Today, the `SameSite` cookie attribute is supported by most major browser vendors (see, i.e., [here](https://caniuse.com/?search=samesite)), acting as an important defense-in-depth against XS attacks. 
 
 
-### XS Attacks
+## XS Attacks
 
 XS attacks are a family of web attacks where attackers lure users into visiting a malicious web page that tricks the user's web browser to send authenticated cross-site HTTP requests to a vulnerable target website. One of the first instances of cross-site attacks is [Cross-Site Request Forgery](https://portswigger.net/web-security/csrf) (CSRF), where attackers leverage cross-site requests to perform security-sensitive, server-side state-changing operations, such as [user credential reset](https://www.acunetix.com/blog/web-security-zone/critical-csrf-vulnerability-facebook/) or [money transfers](https://www.cs.utexas.edu/~shmat/courses/cs378/zeller.pdf), without user's consent or awareness. 
 
@@ -33,7 +33,7 @@ In the preparation step, the attacker prepares a malicious webpage referring to 
 
 
 
-### A Little Bit of History
+## A Little Bit of History
 
 The main benefit of the `SameSite` attribute is a more stricter default cookie policy, which can disrupt existing websites. To help developers transition to the [new default policy](https://chromestatus.com/feature/5088147346030592), Google introduced three [gradual changes to Chrome](https://www.chromium.org/updates/same-site/), introduced in 2016, 2019, and 2020.
 
