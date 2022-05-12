@@ -3,7 +3,7 @@ title: Contributions
 nav_order: 3
 ---
 
-{% include _includes/toggle_color.html %}
+{% include toggle_color.html %}
 
 # SameSite Wiki
 

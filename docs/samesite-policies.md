@@ -4,7 +4,7 @@ has_children: true
 nav_order: 2
 ---
 
-{% include _includes/toggle_color.html %}
+{% include toggle_color.html %}
 
 # SameSite Wiki
 
