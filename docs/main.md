@@ -12,7 +12,7 @@ This wiki is meant to introduce readers to the SameSite cookie policy and also s
 {: .fs-6 .fw-300 }
 
 
-[Contribute Now](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/same-site-wiki){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Contribute Now](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/same-site-wiki){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 
 ## Overview
