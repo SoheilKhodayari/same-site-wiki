@@ -31,7 +31,7 @@ if(theTheme === THEME_LIGHT){
 } else if (theTheme === THEME_DARK){
 	jtd.setTheme('dark');
 } else{
-	jtd.setTheme('dark'); // default theme
+	jtd.setTheme('dark');
 }
 
 jtd.addEvent(toggleDarkMode, 'click', function(){
