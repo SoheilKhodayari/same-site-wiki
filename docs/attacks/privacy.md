@@ -23,9 +23,9 @@ If websites do not set the [`Secure`](https://developer.mozilla.org/en-US/docs/W
 To mitigate this issue, Chromium-based browsers [reject](https://www.chromestatus.com/feature/5633521622188032) `SameSite=None` cookies without the `Secure` attribute<sup>[\[1, 2\]](#references)</sup>, but other browsers (e.g., Firefox and Safari) do not.
 
 
-#### Example
+**Example.** Assume a website *W1* that set a privacy-sensitive cookie with `SameSite=None` and another website *W2* that performs cross-site requests to *W1*. Because of the policy set by *W1*, browsers will include cookies in all requests from *W2* to *W1*. This is the typical setting of third-party cookies widely used for tracking users. [Pervasive network monitoring](https://datatracker.ietf.org/doc/html/rfc7258) is a threat to these scenarios because if cookies are not securely transported (i.e., over TLS), they can reveal sensitive information about user identity. 
 
-Assume a website *W1* that set a privacy-sensitive cookie with `SameSite=None` and another website *W2* that performs cross-site requests to *W1*. Because of the policy set by *W1*, browsers will include cookies in all requests from *W2* to *W1*. This is the typical setting of third-party cookies widely used for tracking users. [Pervasive network monitoring](https://datatracker.ietf.org/doc/html/rfc7258) is a threat to these scenarios because if cookies are not securely transported (i.e., over TLS), they can reveal sensitive information about user identity. For this reason, browsers like Chrome and Opera reject cookies that do not set the `Secure` flag together with `SameSite=None` policy<sup>[\[2\]](#references)</sup>. However, other browsers such as Firefox and Safari do not reject these cookies<sup>[\[3\]](#references)</sup>, exposing users of these websites to pervasive monitoring attacks.
+For these reasons, browsers like Chrome and Opera reject cookies that do not set the `Secure` flag together with `SameSite=None` policy<sup>[\[2\]](#references)</sup>. However, other browsers such as Firefox and Safari do not reject these cookies<sup>[\[3\]](#references)</sup>, exposing users of these websites to pervasive monitoring attacks.
 
 
 
