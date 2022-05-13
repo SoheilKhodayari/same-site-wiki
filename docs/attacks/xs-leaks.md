@@ -1,7 +1,7 @@
 ---
 title: XS-Leaks
 parent: Attacks
-nav_order: 1
+nav_order: 3
 ---
 
 {% include toggle_color.html %}

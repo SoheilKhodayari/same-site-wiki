@@ -1,7 +1,7 @@
 ---
 title: CSRF
 parent: Attacks
-nav_order: 1
+nav_order: 2
 ---
 
 {% include toggle_color.html %}
@@ -42,8 +42,6 @@ One of the fundamental limitations imposed with the new default Lax policy is th
 
 
 
-
-### Policy Downgrade and Bypass Techniques
 
 
 ## References
