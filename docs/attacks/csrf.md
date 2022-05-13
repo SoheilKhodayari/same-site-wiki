@@ -39,8 +39,29 @@ One of the fundamental limitations imposed with the new default Lax policy is th
 
 ### Client-side CSRF
 
+Client-side Cross-Site Request Forgery (client-side CSRF) is a new breed of CSRF vulnerabilities affecting modern web applications<sup>[\[4, 5\]](#references)</sup>. In the client-side CSRF, the vulnerable component is the client-side JavaScript program, which allows an attacker to generate arbitrary requests to a CSRF-protected end-point with a valid CSRF token by modifying the program input parameters, e.g., by modifying the end-point to which the client-side code makes an HTTP request to. 
 
 
+**Note.** Unfortunately, existing mechanisms cannot offer a complete protection against client-side CSRF attacks, e.g., when [synchronizer tokens](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html#synchronizer-token-pattern) or [custom HTTP headers](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html#use-of-custom-request-headers) are used, the JavaScript program will include them in the outgoing requests. Also, if the browser or the web site is using the SameSite policy for cookies, JavaScript web pages, once loaded, can perform preliminar same-site requests to determine whether a pre-established user session exists, circumventing the SameSite policy.
+
+
+**Example.** The following code snippet demonstrate a simple example of a client-side CSRF vulnerability.
+
+```javascript
+(function sendRequest(){
+	var requestEndpoint = window.location.hash.substr(1);
+	var requestData = {"XSRF_TOKEN": "RANDOM_TOKEN_XYZ"};
+	$.ajax({
+	    url : requestEndpoint, // attacker-controlled
+	    type: "POST",
+	    data : requestData,
+	    success: function(data, textStatus, jqXHR){ /* ...*/ }
+	    error: function (jqXHR, textStatus, errorThrown){ /* ...*/ }
+	});
+})();
+```
+
+In the above example, the attacker can control the endpoint to which a legitimate async HTTP request is sent by changing the [URL hash fragment](https://developer.mozilla.org/en-US/docs/Web/API/Location/hash).
 
 
 
@@ -52,3 +73,6 @@ One of the fundamental limitations imposed with the new default Lax policy is th
 
 3. Compagna, L., Jonker, H. L., Krochewski, J., Krumnow, B., & Sahin, A preliminary study on the adoption and effectiveness of SameSite cookies as a CSRF defence. In IEEE EuroS&PW, 2021. [Link](https://doi.org/10.1109/eurospw54576.2021.00012)
 
+4. Client-side CSRF, Facebook Whitehat Bug Bounty Program. [Link](https://www.facebook.com/notes/facebook-bug-bounty/client-side-csrf/2056804174333798/)
+
+5. S. Khodayari, and G. Pellegrino, JAW: Studying Client-side CSRF with Hybrid Property Graphs and Declarative Traversals, 30th USENIX Security Symposium, 2021. [Link](https://soheilkhodayari.github.io/papers/usesec21-jaw.pdf)
