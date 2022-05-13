@@ -25,7 +25,7 @@ A simple wiki with all you need to know about SameSite cookies (but were afraid 
 
 An online version of the Wiki is available at [https://soheilkhodayari.github.io/same-site-wiki/docs/main.html](https://soheilkhodayari.github.io/same-site-wiki/).
 
-This project is licensed under `GNU AFFERO GENERAL PUBLIC LICENSE V3.0`. See [here](LICENSE) for more information.
+This project is available as open source under the terms of the `GNU AFFERO GENERAL PUBLIC LICENSE V3.0`. See [LICENSE](LICENSE) for more information.
 
 
 ## 🚀 Quick Start
@@ -48,6 +48,7 @@ The repository uses [Github Actions](https://github.com/features/actions) to aut
 **Docker:** You can build and run this Wiki inside a Docker container with:
 
 ```
+$ docker-compose build
 $ docker-compose up
 ```
 
@@ -70,7 +71,9 @@ We would be delighted to know if there is any specific behaviour you would like 
 
 ## 🎃 Contribution and Code Of Conduct
 
-Pull requests are always more than welcomed. Please see the contributor [code of conduct](CODE_OF_CONDUCT.md). 
+Bug reports and pull requests are always more than welcomed on [GitHub](https://github.com/SoheilKhodayari/same-site-wiki/pulls). For more information, please refer to [contribution guidelines](https://soheilkhodayari.github.io/same-site-wiki/docs/contributions). 
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the contributor [code of conduct](CODE_OF_CONDUCT.md). 
 
 
 
