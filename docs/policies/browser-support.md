@@ -1,7 +1,7 @@
 ---
-title: Browsers
+title: Web Browsers
 parent: SameSite Policies
-nav_order: 1
+nav_order: 2
 ---
 
 {% include toggle_color.html %}

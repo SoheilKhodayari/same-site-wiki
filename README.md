@@ -11,7 +11,7 @@
 <p align="center">
 	<a href="//soheilkhodayari.github.io/same-site-wiki/docs/main.html">Website</a> |
 	<a href="//github.com/SoheilKhodayari/same-site-wiki/blob/master/docs">Wiki</a> |
-	<a href="//github.com/SoheilKhodayari/same-site-wiki/blob/master/README.md#quick-start">Quick Start</a> |
+	<a href="#quick-start">Quick Start</a> |
 	<a href="//soheilkhodayari.github.io/papers/sp22_samesite_cookies.pdf">Paper</a>
 </p>
 

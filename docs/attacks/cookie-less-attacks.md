@@ -1,7 +1,7 @@
 ---
 title: Cookie-less Attacks
 parent: Attacks
-nav_order: 5
+nav_order: 7
 ---
 
 {% include toggle_color.html %}
