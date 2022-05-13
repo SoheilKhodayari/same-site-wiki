@@ -26,7 +26,7 @@ CSRF variants that are not protected by SameSite, or variants whose protection c
 ### Replaying State-changing GET 
 
 
-The new default Lax policy does not prevent the inclusion of cookies in top-level navigational HTTP requests. Therefore, if web applications mis-use [GET requests](https://www.rfc-editor.org/rfc/rfc2616#section-9.3) for security-sensitive state-changing operations, attackers can forge *authenticated*, cross-origin HTTP requests on behalf of victims, e.g., leveraging the [window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) JavaScript API (see coverage of policies over request contexts in [Table I](/same-site-wiki/docs/policies#overview-of-samesite-policies)).
+The new default Lax policy does not prevent the inclusion of cookies in top-level navigational HTTP requests. Therefore, if web applications mis-use [GET requests](https://www.rfc-editor.org/rfc/rfc2616#section-9.3) for security-sensitive state-changing operations, attackers can forge *authenticated*, cross-origin HTTP requests on behalf of victims, e.g., leveraging the [window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) JavaScript API (see coverage of policies over request contexts in [Table I](/same-site-wiki/docs/policies/overview#overview-of-samesite-policies)).
 
 According to recent empirical measurement studies<sup>[\[1, 2, 3\]](#references)</sup>, at least 10.3% of web applications use GET-based state-changes, rendering CSRF a viable threat against these applications. 
 
