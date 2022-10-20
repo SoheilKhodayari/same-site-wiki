@@ -13,7 +13,7 @@ Stable
 
 ## Cross-Site Information Leakage (XS-Leaks)
 
-Top-level navigation GET requests are not protected by the `Lax`-by-default policy. Attackers can abuse these requests to leak the state of victims in a target website not controlled by the attacker across site origins. The state of a victim at a target website is determined by its status, account and content-related properties. For example, a user may be logged in or logged out, may be the owner of a specific resource (e.g., uploaded video, authored blog post, etc), or have a certain privilege (e.g., admin). 
+Top-level navigational GET requests are not protected by the `Lax-by-default` policy. Attackers can abuse these requests to leak the state of victims in a target website not controlled by the attacker across site origins. The state of a victim at a target website is determined by its status, account and content-related properties. For example, a user may be logged in or logged out, may be the owner of a specific resource (e.g., uploaded video, authored blog post, etc), or have a certain privilege (e.g., admin). 
 
 
 ### Window Properties Leak (Frame Counting)
@@ -43,7 +43,7 @@ Read more about this attack [here](https://xsleaks.dev/docs/attacks/frame-counti
 
 ### postMessage Broadcasts
 
-Similarly to the previous threat, attackers can issue top-level navigation requests using the [window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) JavaScript API, listen to broadcasted postMessages from the opened web page, and leak the user state by comparing the set of observed messages, as long as these messages are state-dependent. Note that ehe opened webpage can send message back to its opener, e.g., via the `window.opener.postMessage()` API.
+Similarly to the previous threat, attackers can issue top-level navigation requests using the [window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) JavaScript API, listen to broadcasted postMessages from the opened web page, and leak the user state by comparing the set of observed messages, as long as these messages are state-dependent. Note that the opened webpage can send message back to its opener, e.g., via the `window.opener.postMessage()` API.
 
 **Example.** The script below demonstrates how to access the broadcasted messages from a cross-origin webpage. 
 
